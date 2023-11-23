@@ -1,0 +1,739 @@
+{
+	"info": {
+		"_postman_id": "0e841bd0-2ed3-4a7a-b44a-dcd9425c15d7",
+		"name": "ShopAll",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26406695"
+	},
+	"item": [
+		{
+			"name": "Auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"maria@gmail.com\",\r\n    \"password\": \"password456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categorias/consultarTodas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA2ODM4MDAsImV4cCI6MTcwMDY4NzQwMH0.lOY5ldR-5QD1pIxRDEjXjTcKQbx2b1obzqL_NwKyL0-7uUVQH_ljYn9KOpS-VPvQx0MEn1hb5oHwD-QYZYTDMw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/categorias/consultarTodas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias",
+						"consultarTodas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categorias/guardar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA2ODM4MDAsImV4cCI6MTcwMDY4NzQwMH0.lOY5ldR-5QD1pIxRDEjXjTcKQbx2b1obzqL_NwKyL0-7uUVQH_ljYn9KOpS-VPvQx0MEn1hb5oHwD-QYZYTDMw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Hogar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/categorias/guardar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categorias/actualizar/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA2OTA4ODQsImV4cCI6MTcwMDY5NDQ4NH0.zkYxGrGUNIeWjzCtMAwvyY-Z2bDSk5ymIShw3_R5h3GpZ0ZbWNqlEDrjRFfwRI0VcpdzsM7kHkUw757HCvigZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Blusas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/categorias/actualizar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias",
+						"actualizar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categorias/eliminar/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA2ODY4OTQsImV4cCI6MTcwMDY5MDQ5NH0.MHBA5Z04JQfrJp2OaHqrHkMvynDAkRAQAiPF8SfdPw_6izBkCsFKzvwTrX4hPHI_hsVmR2vw3FjHUldRN7E8lA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/categorias/eliminar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comentarios/consultarTodos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA2OTA4ODQsImV4cCI6MTcwMDY5NDQ4NH0.zkYxGrGUNIeWjzCtMAwvyY-Z2bDSk5ymIShw3_R5h3GpZ0ZbWNqlEDrjRFfwRI0VcpdzsM7kHkUw757HCvigZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/comentarios/consultarTodos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comentarios",
+						"consultarTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comentarios/guardar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA2OTA4ODQsImV4cCI6MTcwMDY5NDQ4NH0.zkYxGrGUNIeWjzCtMAwvyY-Z2bDSk5ymIShw3_R5h3GpZ0ZbWNqlEDrjRFfwRI0VcpdzsM7kHkUw757HCvigZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descripcion\": \"Excelente producto, cumplió todas mis expectativas\",\r\n    \"idComprador\": 1,\r\n    \"idProducto\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/comentarios/guardar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comentarios",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comentarios/actualizar/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA2OTA4ODQsImV4cCI6MTcwMDY5NDQ4NH0.zkYxGrGUNIeWjzCtMAwvyY-Z2bDSk5ymIShw3_R5h3GpZ0ZbWNqlEDrjRFfwRI0VcpdzsM7kHkUw757HCvigZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descripcion\": \"Definitivamente no recomiend este producto, no cumple con su descripción\",\r\n    \"idComprador\": 1,\r\n    \"idProducto\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/comentarios/actualizar/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comentarios",
+						"actualizar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comentarios/eliminar/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA2OTA4ODQsImV4cCI6MTcwMDY5NDQ4NH0.zkYxGrGUNIeWjzCtMAwvyY-Z2bDSk5ymIShw3_R5h3GpZ0ZbWNqlEDrjRFfwRI0VcpdzsM7kHkUw757HCvigZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/comentarios/eliminar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comentarios",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Compra/generarCompra",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA2OTMzOTUsImV4cCI6MTcwMDY5Njk5NX0.mLLTZM76Sud5EvDUdrGL2qn-j_zAf9zTTw4oLnrL9d6iAjv02fStgBhwNiaL3R3qlI2as2HjU3OtaQOvLh2ppw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idUsuario\": 2,\r\n    \"productos\": [{\r\n        \"idProducto\": 1,\r\n        \"cantidad\": 1\r\n    },\r\n    {\r\n        \"idProducto\": 1,\r\n        \"cantidad\": 2\r\n    }]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/compra/generarCompra",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compra",
+						"generarCompra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos/consultarTodos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDE3NzksImV4cCI6MTcwMDcwNTM3OX0.qh-u73ODdI1Ib8QRG-SSrXQOMc9WRHU00nF0DnvafNnwEyZVSudvXwda1cEt6itRtVW2YVRIR8zDycnsn4WZ1A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/productos/consultarTodos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"consultarTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos/guardar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDE3NzksImV4cCI6MTcwMDcwNTM3OX0.qh-u73ODdI1Ib8QRG-SSrXQOMc9WRHU00nF0DnvafNnwEyZVSudvXwda1cEt6itRtVW2YVRIR8zDycnsn4WZ1A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"nombre\": \"Lavadora Mabe\",\r\n    \"descripcion\": \"Marca Mabe 16 kg\",\r\n    \"precio\": 8000,\r\n    \"cantDisponible\": 60,\r\n    \"idCategoria\": 1,\r\n    \"idVendedor\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/productos/guardar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos/actualizar/7",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDE3NzksImV4cCI6MTcwMDcwNTM3OX0.qh-u73ODdI1Ib8QRG-SSrXQOMc9WRHU00nF0DnvafNnwEyZVSudvXwda1cEt6itRtVW2YVRIR8zDycnsn4WZ1A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"nombre\": \"Lavadora Samsung\",\r\n    \"descripcion\": \"Marca Samsung 11 kg\",\r\n    \"precio\": 6000,\r\n    \"cantDisponible\": 80,\r\n    \"idCategoria\": 1,\r\n    \"idVendedor\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/productos/actualizar/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"actualizar",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios/consultarTodos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDM2NTgsImV4cCI6MTcwMDcwNzI1OH0.EAjSs0rfCIWv9TOAAhL5l5x2YpB1MwmWJk7uczLNq1JudEZMFQPtDsX382sDl4V1sQOgVKuMF5SneRtbIIx_CA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA1NDQzNzMsImV4cCI6MTcwMDU0Nzk3M30.MsQ8Nlrz8Nk0ZhAR8Us1tt-Z5rLOWafzgSISbivuwbnHdSaJJ5xFubvSURiM2BUcICEbK8-aGHnMY4xlC_juPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/usuarios/consultarTodos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"consultarTodos"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA1NDQzNzMsImV4cCI6MTcwMDU0Nzk3M30.MsQ8Nlrz8Nk0ZhAR8Us1tt-Z5rLOWafzgSISbivuwbnHdSaJJ5xFubvSURiM2BUcICEbK8-aGHnMY4xlC_juPQ",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios/guardar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDM2NTgsImV4cCI6MTcwMDcwNzI1OH0.EAjSs0rfCIWv9TOAAhL5l5x2YpB1MwmWJk7uczLNq1JudEZMFQPtDsX382sDl4V1sQOgVKuMF5SneRtbIIx_CA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"María\",\r\n    \"apePaterno\": \"Mendoza\",\r\n    \"apeMaterno\": \"Ramírez\",\r\n    \"telefono\": \"4151818453\",\r\n    \"email\":\"mariagmenr@gmail.com\",\r\n    \"password\": \"linux123\",\r\n    \"idRol\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/guardar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios/actualizar/6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDM4ODEsImV4cCI6MTcwMDcwNzQ4MX0.T3rAw7ZMULtB1uazoJl5I47qMYS-rXybMNeEgEqUHlP0e0YBIPJ2FrB_pqUMw2XaqgHo5oYiRd2ZcybhuGg5iQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"María Guadalupe\",\r\n    \"apePaterno\": \"Mendoza\",\r\n    \"apeMaterno\": \"Ramírez\",\r\n    \"telefono\": \"4151818453\",\r\n    \"email\":\"mariagmenr@gmail.com\",\r\n    \"password\": \"linux123\",\r\n    \"idRol\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/actualizar/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"actualizar",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios/eliminar/5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDM4ODEsImV4cCI6MTcwMDcwNzQ4MX0.T3rAw7ZMULtB1uazoJl5I47qMYS-rXybMNeEgEqUHlP0e0YBIPJ2FrB_pqUMw2XaqgHo5oYiRd2ZcybhuGg5iQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/usuarios/eliminar/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"eliminar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transacciones/consultarTodas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDQ1MjYsImV4cCI6MTcwMDcwODEyNn0.78k2d3f3U7QzAO3u8P98jbz5Ih2j2kGSYSCFZ9w_6QhrLmIqjEeQBTHLX_GPazfaX_sePhEzQmohefpLtvQOxA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/transacciones/consultarTodas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones",
+						"consultarTodas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transacciones/generarTransaccion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDQ1MjYsImV4cCI6MTcwMDcwODEyNn0.78k2d3f3U7QzAO3u8P98jbz5Ih2j2kGSYSCFZ9w_6QhrLmIqjEeQBTHLX_GPazfaX_sePhEzQmohefpLtvQOxA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"idCompra\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/transacciones/generarTransaccion",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones",
+						"generarTransaccion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transacciones/actualizar/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDQ1MjYsImV4cCI6MTcwMDcwODEyNn0.78k2d3f3U7QzAO3u8P98jbz5Ih2j2kGSYSCFZ9w_6QhrLmIqjEeQBTHLX_GPazfaX_sePhEzQmohefpLtvQOxA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"idCompra\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/transacciones/actualizar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones",
+						"actualizar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transacciones/eliminar/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpYXQiOjE3MDA3MDQ1MjYsImV4cCI6MTcwMDcwODEyNn0.78k2d3f3U7QzAO3u8P98jbz5Ih2j2kGSYSCFZ9w_6QhrLmIqjEeQBTHLX_GPazfaX_sePhEzQmohefpLtvQOxA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/transacciones/eliminar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
